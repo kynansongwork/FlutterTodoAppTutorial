@@ -14,6 +14,8 @@ class TodosBloc extends Bloc<TodosEvent, TodosState> {
   TodosState get initialState => TodosLoadInProgress();
 
   @override
+  //Aim to yield a new state instead of mutating as in the latter, when compared
+  // would always evaluate to true and no state would change.
   Stream<TodosState> mapEventToState(TodosEvent event) async* {
     if (event is TodosLoadSuccess) {
       yield* _mapTodosLoadedToState();
