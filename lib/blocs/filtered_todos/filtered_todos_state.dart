@@ -8,7 +8,7 @@ abstract class FilteredTodosState extends Equatable {
   List<Object> get props => [];
 }
 
-class FlteredTodosLoadInProgress extends FilteredTodosState {}
+class FilteredTodosLoadInProgress extends FilteredTodosState {}
 // State when fetching todos.
 
 class FilteredTodosLoadSuccess extends FilteredTodosState {
