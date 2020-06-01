@@ -34,6 +34,6 @@ class StatsBloc extends Bloc<StatsEvent, StatsState> {
   @override
   Future<void> close() {
     todosSubscription.cancel();
-    return super.close()
+    return super.close();
   }
 }
