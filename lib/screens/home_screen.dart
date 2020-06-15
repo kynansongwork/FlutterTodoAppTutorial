@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
           appBar: AppBar(
             title: Text(FlutterBlocLocalisations.of(context).appTitle),
             actions: [
-              FilterButon(visible: activeTab == AppTab.todos),
+              FilterButton(visible: activeTab == AppTab.todos),
               ExtraActions(),
             ],
           ),
