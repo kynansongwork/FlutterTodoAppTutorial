@@ -38,11 +38,13 @@ class TodosApp extends StatelessWidget {
       theme: ArchSampleTheme.theme,
       localizationsDelegates: [
         ArchSampleLocalizationsDelegate(),
-        FlutterBlocLocalizationsDelegate()
+        FlutterBlocLocalisationsDelegate()
       ],
       routes: {
         ArchSampleRoutes.home: (context) {
+          //Renders the home screen.
           return MultiBlocProvider(
+            //Multibloc provider makes the following bloc available to widgets in the subtree.
             providers: [
               BlocProvider<TabBloc>(
               create: (context) => TabBloc(),
@@ -62,6 +64,7 @@ class TodosApp extends StatelessWidget {
           );
         },
         ArchSampleRoutes.addTodo: (context) {
+          //Renders an add/edit screen whe is editing is false.
         return AddEditScreen(
           key: ArchSampleKeys.addTodoScreen,
           onSave: (task, note) {

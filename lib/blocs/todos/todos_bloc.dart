@@ -18,7 +18,7 @@ class TodosBloc extends Bloc<TodosEvent, TodosState> {
   //Aim to yield a new state instead of mutating as in the latter, when compared
   // would always evaluate to true and no state would change.
   Stream<TodosState> mapEventToState(TodosEvent event) async* {
-    if (event is TodosLoadSuccess) {
+    if (event is TodosLoaded) {
       yield* _mapTodosLoadedToState();
     } else if (event is TodoAdded) {
       yield* _mapTodoAddedToState(event);
